@@ -10,7 +10,9 @@ import UIKit
 class LobbyViewController: UIViewController {
     
     var dataList: [DataModel] = [
-        DataModel(name: "基本操作", type: .uvpa)]
+        DataModel(name: "基本操作", type: .uvpa),
+        DataModel(name: "動畫研究一", type: .ca)
+    ]
 
     @IBOutlet weak var listTableView: UITableView! {
         didSet {
@@ -49,10 +51,13 @@ extension LobbyViewController: UITableViewDataSource, UITableViewDelegate {
         return animationDataCell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let vc = PropertyAnimatorManager.shared.createPAVC()
-        
-        self.navigationController?.pushViewController(vc, animated: true)
+        if dataList[indexPath.row].name == "基本操作" {
+            let vc = PropertyAnimatorManager.shared.createPAVC()
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let vc = CoreAnimationManager.shared.createCAVC()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 }

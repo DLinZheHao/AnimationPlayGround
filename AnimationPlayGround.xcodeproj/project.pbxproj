@@ -21,6 +21,11 @@
 		053873682AB297E9006D98BE /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053873672AB297E9006D98BE /* UITableView+Extension.swift */; };
 		0538736A2AB297FB006D98BE /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053873692AB297FB006D98BE /* UITableViewCell+Extension.swift */; };
 		0538736C2AB29B37006D98BE /* PropertyAnimatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0538736B2AB29B37006D98BE /* PropertyAnimatorManager.swift */; };
+		053873752AB29FAE006D98BE /* CoreAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053873742AB29FAE006D98BE /* CoreAnimationManager.swift */; };
+		053873772AB2A092006D98BE /* CoreAnimation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053873762AB2A092006D98BE /* CoreAnimation.storyboard */; };
+		053873792AB2A148006D98BE /* CAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053873782AB2A148006D98BE /* CAViewController.swift */; };
+		0538737B2AB2D50E006D98BE /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0538737A2AB2D50E006D98BE /* UIStoryboard+Extension.swift */; };
+		0538737D2AB2D562006D98BE /* UIVIewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0538737C2AB2D562006D98BE /* UIVIewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,11 @@
 		053873672AB297E9006D98BE /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		053873692AB297FB006D98BE /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		0538736B2AB29B37006D98BE /* PropertyAnimatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyAnimatorManager.swift; sourceTree = "<group>"; };
+		053873742AB29FAE006D98BE /* CoreAnimationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAnimationManager.swift; sourceTree = "<group>"; };
+		053873762AB2A092006D98BE /* CoreAnimation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoreAnimation.storyboard; sourceTree = "<group>"; };
+		053873782AB2A148006D98BE /* CAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAViewController.swift; sourceTree = "<group>"; };
+		0538737A2AB2D50E006D98BE /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		0538737C2AB2D562006D98BE /* UIVIewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,19 +82,17 @@
 		053873462AB14E80006D98BE /* AnimationPlayGround */ = {
 			isa = PBXGroup;
 			children = (
+				053873732AB29F93006D98BE /* Manager */,
+				053873722AB29F84006D98BE /* Lobby */,
+				053873712AB29F67006D98BE /* CoreAnimation */,
 				053873662AB297BD006D98BE /* Extensions */,
 				0538735F2AB29147006D98BE /* UIViewPropertyAnimator */,
 				053873472AB14E80006D98BE /* AppDelegate.swift */,
 				053873492AB14E80006D98BE /* SceneDelegate.swift */,
-				0538734B2AB14E80006D98BE /* LobbyViewController.swift */,
-				0538734D2AB14E80006D98BE /* Main.storyboard */,
 				053873502AB14E81006D98BE /* Assets.xcassets */,
 				053873522AB14E81006D98BE /* LaunchScreen.storyboard */,
 				053873552AB14E81006D98BE /* Info.plist */,
 				053873602AB2958C006D98BE /* DataModel.swift */,
-				053873622AB296BB006D98BE /* AnimationDataCell.swift */,
-				053873632AB296BB006D98BE /* AnimationDataCell.xib */,
-				0538736B2AB29B37006D98BE /* PropertyAnimatorManager.swift */,
 			);
 			path = AnimationPlayGround;
 			sourceTree = "<group>";
@@ -103,8 +111,39 @@
 			children = (
 				053873672AB297E9006D98BE /* UITableView+Extension.swift */,
 				053873692AB297FB006D98BE /* UITableViewCell+Extension.swift */,
+				0538737A2AB2D50E006D98BE /* UIStoryboard+Extension.swift */,
+				0538737C2AB2D562006D98BE /* UIVIewController+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		053873712AB29F67006D98BE /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				053873762AB2A092006D98BE /* CoreAnimation.storyboard */,
+				053873782AB2A148006D98BE /* CAViewController.swift */,
+			);
+			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
+		053873722AB29F84006D98BE /* Lobby */ = {
+			isa = PBXGroup;
+			children = (
+				0538734B2AB14E80006D98BE /* LobbyViewController.swift */,
+				0538734D2AB14E80006D98BE /* Main.storyboard */,
+				053873622AB296BB006D98BE /* AnimationDataCell.swift */,
+				053873632AB296BB006D98BE /* AnimationDataCell.xib */,
+			);
+			path = Lobby;
+			sourceTree = "<group>";
+		};
+		053873732AB29F93006D98BE /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0538736B2AB29B37006D98BE /* PropertyAnimatorManager.swift */,
+				053873742AB29FAE006D98BE /* CoreAnimationManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +206,7 @@
 			files = (
 				053873542AB14E81006D98BE /* LaunchScreen.storyboard in Resources */,
 				053873652AB296BB006D98BE /* AnimationDataCell.xib in Resources */,
+				053873772AB2A092006D98BE /* CoreAnimation.storyboard in Resources */,
 				0538735E2AB29079006D98BE /* PAViewController.xib in Resources */,
 				053873512AB14E81006D98BE /* Assets.xcassets in Resources */,
 				0538734F2AB14E80006D98BE /* Main.storyboard in Resources */,
@@ -180,14 +220,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0538737D2AB2D562006D98BE /* UIVIewController+Extension.swift in Sources */,
 				053873642AB296BB006D98BE /* AnimationDataCell.swift in Sources */,
 				053873612AB2958C006D98BE /* DataModel.swift in Sources */,
+				0538737B2AB2D50E006D98BE /* UIStoryboard+Extension.swift in Sources */,
 				053873682AB297E9006D98BE /* UITableView+Extension.swift in Sources */,
 				0538736A2AB297FB006D98BE /* UITableViewCell+Extension.swift in Sources */,
 				0538734C2AB14E80006D98BE /* LobbyViewController.swift in Sources */,
 				0538735D2AB29079006D98BE /* PAViewController.swift in Sources */,
 				0538736C2AB29B37006D98BE /* PropertyAnimatorManager.swift in Sources */,
 				053873482AB14E80006D98BE /* AppDelegate.swift in Sources */,
+				053873752AB29FAE006D98BE /* CoreAnimationManager.swift in Sources */,
+				053873792AB2A148006D98BE /* CAViewController.swift in Sources */,
 				0538734A2AB14E80006D98BE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
