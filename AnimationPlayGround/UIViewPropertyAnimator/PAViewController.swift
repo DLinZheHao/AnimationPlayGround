@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  PAViewController.swift
 //  AnimationPlayGround
 //
-//  Created by 林哲豪 on 2023/9/13.
+//  Created by 林哲豪 on 2023/9/14.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class PAViewController: UIViewController {
+
     @IBOutlet weak var blueView: UIView!
     
     // 動畫執行期間還可以操作，結束後沒有任何效果
@@ -91,6 +91,4 @@ class ViewController: UIViewController {
         
         animator.startAnimation()
     }
-    
 }
-
